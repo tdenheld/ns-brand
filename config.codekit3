@@ -2359,19 +2359,6 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/assets\/sass\/components.backgrounds.scss": {
-		"aP": 0,
-		"bl": 0,
-		"dP": 10,
-		"dS": 0,
-		"ft": 4,
-		"ma": 0,
-		"oA": 0,
-		"oAP": "\/assets\/sass\/components.backgrounds.css",
-		"oF": 0,
-		"oS": 0,
-		"uL": 1
-		},
 	"\/assets\/sass\/components.buttons.scss": {
 		"aP": 0,
 		"bl": 0,

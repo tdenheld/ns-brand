@@ -6,10 +6,6 @@
 	display: grid;
 	grid-column-gap: $gutter;
 	
-	&--align-center {
-		align-items: center;
-	}
-	
 	&--1-1 {
 		@include md {
 			grid-template-columns: 1fr 1fr;

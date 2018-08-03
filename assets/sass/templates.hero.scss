@@ -119,12 +119,3 @@
 		transform: scale(1.03);
 	}
 }
-
-
-
-// alpha values
-@for $i from 1 through 10 {
-	.tk-alpha-#{$i} {
-		opacity: $i / 10;
-	}
-}
