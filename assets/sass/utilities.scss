@@ -8,6 +8,9 @@
 .display-b {
 	display: block;
 }
+.display-i {
+	display: inline;
+}
 .display-ib {
 	display: inline-block;
 }
@@ -32,16 +35,27 @@
 
 // rotation
 // ----------------------------------------------------------------------
-.rotate-180 {
-	transform: rotate(180deg);
+.rotate-45 {
+	transform: rotate(45deg);
 }
 .rotate-90 {
 	transform: rotate(90deg);
 }
+.rotate-135 {
+	transform: rotate(135deg);
+}
+.rotate-180 {
+	transform: rotate(180deg);
+}
+.rotate-225 {
+	transform: rotate(225deg);
+}
 .rotate-270 {
 	transform: rotate(270deg);
 }
-
+.rotate-315 {
+	transform: rotate(315deg);
+}
 
 
 // alignments
@@ -57,29 +71,143 @@
 
 // spacers
 // ----------------------------------------------------------------------
-@for $i from 1 through 16 {
+/*
+	Base:
+	p = padding
+	m = margin
+	
+	Modifiers:
+	a = all
+	h = horizontal
+	v = vertical
+	t = top
+	r = right
+	b = bottom
+	l = left
+	
+	Media Query Extensions:
+     -ns = not-small
+     -m  = medium
+     -l  = large
+*/
+@for $i from 0 through 16 {	
 	// margin
-	.spacer-margin-#{$i} {
-		@include spacer($i, false);
+	.ma-#{$i} {
+		@include spacer($i, margin);
+	}
+	.mh-#{$i} {
+		@include spacer($i, margin-left);
+		@include spacer($i, margin-right);
+	}
+	.mv-#{$i} {
+		@include spacer($i, margin-top);
+		@include spacer($i, margin-bottom);
+	}
+	.mt-#{$i} {
+		@include spacer($i, margin-top);
+	}
+	.mb-#{$i} {
+		@include spacer($i, margin-bottom);
+	}
+	.ml-#{$i} {
+		@include spacer($i, margin-left);
+	}
+	.mr-#{$i} {
+		@include spacer($i, margin-right);
+	}
+
+	// padding
+	.pa-#{$i} {
+		@include spacer($i, padding);
+	}
+	.ph-#{$i} {
+		@include spacer($i, padding-left);
+		@include spacer($i, padding-right);
+	}
+	.pv-#{$i} {
+		@include spacer($i, padding-top);
+		@include spacer($i, padding-bottom);
+	}
+	.pt-#{$i} {
+		@include spacer($i, padding-top);
+	}
+	.pb-#{$i} {
+		@include spacer($i, padding-bottom);
+	}
+	.pl-#{$i} {
+		@include spacer($i, padding-left);
+	}
+	.pr-#{$i} {
+		@include spacer($i, padding-right);
 	}
 	
-	//padding
-	.spacer-padding-#{$i} {
-		@include spacer($i, true);
+	@include md {
+		// margin
+		.ma-#{$i}-ns {
+			@include spacer($i, margin);
+		}
+		.mh-#{$i}-ns {
+			@include spacer($i, margin-left);
+			@include spacer($i, margin-right);
+		}
+		.mv-#{$i}-ns {
+			@include spacer($i, margin-top);
+			@include spacer($i, margin-bottom);
+		}
+		.mt-#{$i}-ns {
+			@include spacer($i, margin-top);
+		}
+		.mb-#{$i}-ns {
+			@include spacer($i, margin-bottom);
+		}
+		.ml-#{$i}-ns {
+			@include spacer($i, margin-left);
+		}
+		.mr-#{$i}-ns {
+			@include spacer($i, margin-right);
+		}
+		
+		// padding
+		.pa-#{$i} {
+			@include spacer($i, padding);
+		}
+		.ph-#{$i} {
+			@include spacer($i, padding-left);
+			@include spacer($i, padding-right);
+		}
+		.pv-#{$i} {
+			@include spacer($i, padding-top);
+			@include spacer($i, padding-bottom);
+		}
+		.pt-#{$i} {
+			@include spacer($i, padding-top);
+		}
+		.pb-#{$i} {
+			@include spacer($i, padding-bottom);
+		}
+		.pl-#{$i} {
+			@include spacer($i, padding-left);
+		}
+		.pr-#{$i} {
+			@include spacer($i, padding-right);
+		}
 	}
 }
 
 
 
 // opacities
-// -------------------------
+// ----------------------------------------------------------------------
 .o-100 { opacity: 1;    }
+.o-95  { opacity: .95;   }
 .o-90  { opacity: .9;   }
 .o-80  { opacity: .8;   }
+.o-75  { opacity: .75;   }
 .o-70  { opacity: .7;   }
 .o-60  { opacity: .6;   }
 .o-50  { opacity: .5;   }
 .o-40  { opacity: .4;   }
+.o-35  { opacity: .35;   }
 .o-30  { opacity: .3;   }
 .o-20  { opacity: .2;   }
 .o-10  { opacity: .1;   }
@@ -90,119 +218,163 @@
 
 
 // visibility
-// -------------------------
-.hide {
-  display: none;
+// ----------------------------------------------------------------------
+.visible {
+	visibility: visible;
 }
-.show {
-  display: block;
-}
-.invisible {
+.hidden {
   visibility: hidden;
 }
 .visible-xs {
-	@media (min-width: $sm) {
+	@include sm {
 		display: none;
 	}
 }
 .hidden-xs {
-	@media (max-width: $sm) {
+	@include sm-max {
 		display: none;
 	}
 }
 .hidden-sm {
-	@media (min-width: $sm) and (max-width: $md) {
+	@mixin sm-ex {
 		display: none;
 	}
 }
 .hidden-md {
-	@media (min-width: $md) and (max-width: $lg) {
+	@mixin md-ex {
 		display: none;
 	}
 }
 .hidden-lg {
-	@media (min-width: $lg) {
+	@mixin lg {
 		display: none;
 	}
 }
 
 
 
-// fonts
-// -------------------------
-.font-dark-blue {
+/*-------------------
+      Typography
+--------------------*/
+
+// colours
+// ----------------------------------------------------------------------
+.fc-blue {
 	color: $ns-grey;
 }
-.font-white {
+.fc-white {
 	color: $ns-white;
 }
-.font-yellow {
+.fc-yellow {
 	color: $ns-yellow;
 }
-.font-blue {
+.fc-blue {
 	color: $ns-blue;
 }
-.font-light-blue {
+.fc-light-blue {
 	color: $ns-light-blue;
 }
-.font-grey-4 {
+.fc-grey {
+	color: $ns-grey;
+}
+.fc-grey-2 {
+	color: $ns-grey-2;
+}
+.fc-grey-3 {
+	color: $ns-grey-3;
+}
+.fc-grey-4 {
 	color: $ns-grey-4;
 }
-.regular {
+.fc-grey-5 {
+	color: $ns-grey-5;
+}
+.fc-grey-6 {
+	color: $ns-grey-6;
+}
+.fc-grey-6b {
+	color: $ns-grey-6b;
+}
+.fc-grey-7 {
+	color: $ns-grey-7;
+}
+.fc-grey-8 {
+	color: $ns-grey-8;
+}
+
+// font weights
+// ----------------------------------------------------------------------
+.fw-normal {
 	font-weight: normal;
 }
-.bold {
+.fw-b {
 	font-weight: bold;
 }
+
+// word wraps
+// ----------------------------------------------------------------------
 .no-wrap {
 	white-space: nowrap;
 }
-
-
-
-// colours
-// -------------------------
-.blue {
-	color: $ns-blue;
-	svg {
-		fill: $ns-blue;
-	}
-}
-.light-blue {
-	color: $ns-light-blue;
-	svg {
-		fill: $ns-light-blue;
-	}
-}
-.red {
-	color: $ns-red-alert;
-	svg {
-		fill: $ns-red-alert;
-	}
-}
-.white {
-	color: $ns-white;
-	svg {
-		fill: $ns-white;
-	}
-}
-.bg-blue {
-	background-color: $ns-blue;
-}
-.bg-light-blue {
-	background-color: $ns-light-blue;
-}
-.bg-yellow {
-	background-color: $ns-yellow;
-}
-.bg-grey-8 {
-	background-color: $ns-grey-8;
-}
-.bg-grey-7 {
-	background-color: $ns-grey-7;
+.break-word {
+	word-wrap: break-word; 
 }
 
 
+
+
+/*-------------------
+      SVG styles
+--------------------*/
+
+// svg colours
+// ----------------------------------------------------------------------
+.svg-blue svg {
+	fill: $ns-blue;
+}
+.svg-light-blue svg {
+	fill: $ns-light-blue;
+}
+.svg-red svg {
+	fill: $ns-red-alert;
+}
+.svg-white svg {
+	fill: $ns-white;
+}
+.svg-grey svg {
+	fill: $ns-grey;
+}
+.svg-grey-2 svg {
+	fill: $ns-grey-2;
+}
+.svg-grey-3 svg {
+	fill: $ns-grey-3;
+}
+.svg-grey-4 svg {
+	fill: $ns-grey-4;
+}
+.svg-grey-5 svg {
+	fill: $ns-grey-5;
+}
+.svg-grey-6 svg {
+	fill: $ns-grey-6;
+}
+.svg-grey-6b svg {
+	fill: $ns-grey-6b;
+}
+.svg-grey-7 svg {
+	fill: $ns-grey-7;
+}
+.svg-grey-8 svg {
+	fill: $ns-grey-8;
+}
+
+
+
+
+/*-------------------
+       Borders
+--------------------*/
 
 // dividers
 // -------------------------
@@ -233,7 +405,12 @@
 
 
 
-// shadows
+
+/*-------------------
+       Shadows
+--------------------*/
+
+// box shadows
 // -------------------------
 .box-shadow-soft {
 	box-shadow: $box-shadow-soft;
@@ -243,4 +420,61 @@
 }
 .box-shadow-container {
 	box-shadow: $box-shadow-container;
+}
+
+
+
+
+/*-------------------
+     Backgrounds
+--------------------*/
+
+// fills
+// --------------------------------------------
+.bg-white {
+	background-color: $ns-white;
+}
+.bg-yellow {
+	background-color: $ns-yellow;
+}
+
+// gradients
+// --------------------------------------------
+.gd-vivid-blue {
+	background: linear-gradient(
+		110deg, $ns-light-blue 0%, #4BCED4 100%);
+}	
+.gd-cerulean {
+	background: linear-gradient(
+		110deg, #94DCF6 0%, #C6EDFD 100%);
+}	
+.gd-cobalt-blue {
+	background: linear-gradient(to bottom,
+		rgba($ns-blue, 1) 0%,
+		rgba($ns-blue, 0) 80%);
+}
+.gd-black {
+	background: linear-gradient(to bottom,
+		rgba($ns-black, 1) 20%,
+		rgba($ns-black, 0) 100%);
+}	
+.gd-ns-blue {
+	background: linear-gradient(
+		110deg, #0050A8 0%, $ns-blue 100%);
+}	
+.gd-light-grey {
+	background: linear-gradient(
+		110deg, $ns-white 0%, $ns-grey-7 100%);
+}	
+.gd-grey {
+	background: linear-gradient(
+		110deg, $ns-grey-8 0%, $ns-grey-7 100%);
+}	
+.gd-yellow {
+	background: linear-gradient(
+		110deg, $ns-yellow 0%, #FFE48A 100%);
+}	
+.gd-turquoise {
+	background: linear-gradient(
+		110deg, #79CEC3 0%, #BCFFF0 100%);
 }
