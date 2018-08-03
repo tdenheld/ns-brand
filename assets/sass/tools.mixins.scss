@@ -1,0 +1,59 @@
+/*-------------------
+		Mixins
+--------------------*/
+
+
+// font
+// ------------------------------
+
+// convert px to rem
+@function calculate-rem($size) {
+  $remSize: $size / 16px;
+  @return #{$remSize}rem;
+}
+
+// set font style
+@mixin font-style($size, $weight, $factor) {
+	font-weight: $weight;
+	font-size: calculate-rem($size);
+	line-height: $factor;
+}
+
+
+
+
+// spacers
+// ------------------------------
+
+@mixin spacer($factor, $padding) {
+	$spacer-size: $gutter / 4; // 7 pixels
+	
+	@if $padding == true { 
+        padding-bottom: $spacer-size * $factor;
+    }
+    @else {
+		margin-bottom: $spacer-size * $factor;
+    }
+}
+
+
+
+
+// lay-out
+// ------------------------------
+
+@mixin full($p) {
+	position: $p;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+}
+
+@mixin bg($s) {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: $s;
+}

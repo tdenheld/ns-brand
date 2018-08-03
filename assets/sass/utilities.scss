@@ -1,0 +1,229 @@
+/*-------------------
+	  Utilities
+--------------------*/
+
+.inline-block {
+	display: inline-block !important;
+}
+.display-flex {
+	display: flex !important;
+}
+.no-padding {
+	padding: 0 !important;
+}
+.no-margin {
+	margin: 0 !important;
+}
+.w-100 {
+	width: 100% !important;
+}
+.h-100 {
+	height: 100% !important;
+}
+.fade-all {
+	transition: $fade-all !important;
+}
+
+
+
+// rotation
+// -------------------------
+.rotate-180 {
+	transform: rotate(180deg);
+}
+.rotate-90 {
+	transform: rotate(90deg);
+}
+.rotate-270 {
+	transform: rotate(270deg);
+}
+
+
+
+// Layout
+// -------------------------
+
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+.center-v {
+	vertical-align: middle;
+	align-self: center;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.center-h {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	justify-self: center;
+}
+.margin-left-hg {
+	margin-left: $half-gutter;
+}
+.margin-right-hg {
+	margin-right: $half-gutter;
+}
+
+
+
+// Visibility
+// -------------------------
+
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden !important;
+}
+.visible-xs {
+	@media (min-width: $sm) {
+		display: none !important;
+	}
+}
+.hidden-xs {
+	@media (max-width: $sm) {
+		display: none !important;
+	}
+}
+.hidden-sm {
+	@media (min-width: $sm) and (max-width: $md) {
+		display: none !important;
+	}
+}
+.hidden-md {
+	@media (min-width: $md) and (max-width: $lg) {
+		display: none !important;
+	}
+}
+.hidden-lg {
+	@media (min-width: $lg) {
+		display: none !important;
+	}
+}
+
+
+
+// Fonts
+// -------------------------
+
+.font-dark-blue {
+	color: $ns-grey !important;
+}
+.font-white {
+	color: $ns-white !important;
+}
+.font-yellow {
+	color: $ns-yellow !important;
+}
+.font-blue {
+	color: $ns-blue !important;
+}
+.font-light-blue {
+	color: $ns-light-blue !important;
+}
+.font-grey-4 {
+	color: $ns-grey-4 !important;
+}
+.regular {
+	font-weight: normal !important;
+}
+.bold {
+	font-weight: bold !important;
+}
+.no-wrap {
+	white-space: nowrap;
+}
+
+
+
+// Colours
+// -------------------------
+.blue {
+	color: $ns-blue !important;
+	svg {
+		fill: $ns-blue !important;
+	}
+}
+.light-blue {
+	color: $ns-light-blue !important;
+	svg {
+		fill: $ns-light-blue !important;
+	}
+}
+.red {
+	color: $ns-red-alert !important;
+	svg {
+		fill: $ns-red-alert !important;
+	}
+}
+.white {
+	color: $ns-white !important;
+	svg {
+		fill: $ns-white !important;
+	}
+}
+.bg-blue {
+	background-color: $ns-blue !important;
+}
+.bg-light-blue {
+	background-color: $ns-light-blue !important;
+}
+.bg-yellow {
+	background-color: $ns-yellow !important;
+}
+.bg-grey-8 {
+	background-color: $ns-grey-8 !important;
+}
+.bg-grey-7 {
+	background-color: $ns-grey-7 !important;
+}
+
+
+
+// Dividers
+// -------------------------
+.divider-white {
+	border-bottom: 1px solid $ns-white;
+}
+.divider-grey-7 {
+	border-bottom: 1px solid $ns-grey-7;	
+}
+.divider-grey-6b {
+	border-bottom: 1px solid $ns-grey-6b;	
+}
+.divider-grey-6 {
+	border-bottom: 1px solid $ns-grey-6;	
+}
+.divider-alpha-15 {
+	border-bottom: 1px solid $ns-grey-alpha-15;	
+}
+.divider-blue-2px {
+	border-bottom: 2px solid $ns-blue;
+}
+.divider {
+	@extend .divider-grey-7;
+}
+.divider-v {
+	border-left: 1px solid $ns-grey-7;
+}
+
+
+
+// Shadows
+// -------------------------
+.box-shadow-soft {
+	box-shadow: $box-shadow-soft !important;
+}
+.box-shadow-hard {
+	box-shadow: $box-shadow-hard !important;
+}
+.box-shadow-container {
+	box-shadow: $box-shadow-container !important;
+}

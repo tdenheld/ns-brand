@@ -1,0 +1,19 @@
+/*-------------------
+  generic overrides
+-------------------*/
+
+.header,
+.tile,
+.notificationBar,
+.notificationList {
+	box-shadow: 0 1px 0 0 rgba(7,7,33,.15);
+}
+
+.button {
+	border-radius: 4px;
+}
+
+.button--arrowRight {
+	background: linear-gradient(
+		110deg, #0050A8 0%, $ns-light-blue 100%);	
+}
