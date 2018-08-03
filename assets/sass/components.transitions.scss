@@ -53,7 +53,7 @@
 	&--scale-in {
 		opacity: 0;
 		transform: scale(0.97);
-		@media (min-width: $md) {
+		@include md {
 			transition-delay: 200ms;
 		}
 		

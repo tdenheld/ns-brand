@@ -4,10 +4,10 @@
 
 .tk-flow {
 	@include full(absolute);
-	@media (min-width: $md) {
+	@include md {
 		left: 14%;
 	}
-	@media (min-width: $lg) {
+	@include lg {
 		left: 25%;
 	}
 	
@@ -29,10 +29,10 @@
 	top: 0;
 	width: 0;
 	height: 100%;	
-	@media (min-width: $md) {
+	@include md {
 		width: 14%;
 	}
-	@media (min-width: $lg) {
+	@include lg {
 		width: 25%;
 	}
 	
@@ -82,7 +82,7 @@
 // overview
 .tk-overview {
 	padding: 21px 21px $double-gutter;
-	@media (min-width: $sm) {
+	@include sm {
 		padding-bottom: 70px;	
 	}
 	
@@ -98,10 +98,10 @@
 .tk-overview__grid {
 	display: grid;
 	grid-gap: $gutter;
-	@media (min-width: $sm) {
+	@include sm {
 		grid-template-columns: repeat(2, 1fr);
 	}
-	@media (min-width: $md) {
+	@include md {
 		grid-template-columns: repeat(3, 1fr);
 	}
 }

@@ -2,76 +2,55 @@
      Backgrounds
 --------------------*/
 
-.tk-bg {
-	transition: all 750ms $ease;
-	opacity: 0;
-	
-	&--absolute {
-		@include full(absolute);	
-	}
-	&--fixed {
-		@include full(fixed);
-	}
-	&--white {
-		background-color: $ns-white;
-	}
-	&--yellow {
-		background-color: $ns-yellow;
-	}
+
+// fills
+// --------------------------------------------
+.bg-white {
+	background-color: $ns-white;
 }
+.bg-yellow {
+	background-color: $ns-yellow;
+}
+
+
 
 // gradients
-// ----------------------------
-.tk-gradient {
-	@include full(absolute);
-	transition: all 750ms $ease;
-	opacity: 0;
-	
-	&--vivid-blue {
-		background: linear-gradient(
-			135deg, $ns-light-blue 0%, #4BCED4 100%);
-		opacity: 0.3;
-	}	
-	&--cerulean {
-		background: linear-gradient(
-			110deg, #94DCF6 0%, #C6EDFD 100%);
-	}	
-	&--cobalt-blue {
-		background: linear-gradient(to bottom,
-			rgba($ns-blue, 1) 0%,
-			rgba($ns-blue, 0) 80%);
-		opacity: 0.6;
-	}
-	&--black {
-		background: linear-gradient(to bottom,
-			rgba($ns-black, 1) 20%,
-			rgba($ns-black, 0) 100%);
-		opacity: 0.35;
-	}	
-	&--ns-blue {
-		background: linear-gradient(
-			110deg, #0050A8 0%, $ns-blue 100%);
-	}	
-	&--light-grey {
-		background: linear-gradient(
-			110deg, $ns-white 0%, $ns-grey-7 100%);
-	}	
-	&--grey {
-		background: linear-gradient(
-			110deg, $ns-grey-8 0%, $ns-grey-7 100%);
-	}	
-	&--yellow {
-		background: linear-gradient(
-			110deg, $ns-yellow 0%, #FFE48A 100%);
-	}	
-	&--turquoise {
-		background: linear-gradient(
-			110deg, #79CEC3 0%, #BCFFF0 100%);
-	}
+// --------------------------------------------
+.gd-vivid-blue {
+	background: linear-gradient(
+		110deg, $ns-light-blue 0%, #4BCED4 100%);
+}	
+.gd-cerulean {
+	background: linear-gradient(
+		110deg, #94DCF6 0%, #C6EDFD 100%);
+}	
+.gd-cobalt-blue {
+	background: linear-gradient(to bottom,
+		rgba($ns-blue, 1) 0%,
+		rgba($ns-blue, 0) 80%);
 }
-
-
-// borders
-.flx-border-grey-top {
-	border-top: 1px solid $ns-grey-7;
+.gd-black {
+	background: linear-gradient(to bottom,
+		rgba($ns-black, 1) 20%,
+		rgba($ns-black, 0) 100%);
+}	
+.gd-ns-blue {
+	background: linear-gradient(
+		110deg, #0050A8 0%, $ns-blue 100%);
+}	
+.gd-light-grey {
+	background: linear-gradient(
+		110deg, $ns-white 0%, $ns-grey-7 100%);
+}	
+.gd-grey {
+	background: linear-gradient(
+		110deg, $ns-grey-8 0%, $ns-grey-7 100%);
+}	
+.gd-yellow {
+	background: linear-gradient(
+		110deg, $ns-yellow 0%, #FFE48A 100%);
+}	
+.gd-turquoise {
+	background: linear-gradient(
+		110deg, #79CEC3 0%, #BCFFF0 100%);
 }

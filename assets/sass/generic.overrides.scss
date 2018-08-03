@@ -17,3 +17,25 @@
 	background: linear-gradient(
 		110deg, #0050A8 0%, $ns-light-blue 100%);	
 }
+
+.h1,
+.h2,
+.h3,
+.h4, 
+.h5,
+.h6,
+.headingL,
+.headingM,
+.headingS,
+.headingXL,
+.headingXS,
+.headingXXL,
+.headingXXS,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	letter-spacing: -0.3px;
+}
