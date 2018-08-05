@@ -101,7 +101,7 @@
 	border-radius: 50%;
 	box-shadow: 0 0 8px rgba($ns-grey, 0.25);
 	cursor: pointer;
-	transition: transform $timing-medium $ease;
+	transition: transform 200ms $ease;
 	
 	&:hover {
 		transform: scale(1.15);

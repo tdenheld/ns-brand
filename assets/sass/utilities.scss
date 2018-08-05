@@ -4,12 +4,14 @@
 
 // displays
 // ----------------------------------------------------------------------
-.display-b  { display: block; }
-.display-n  { display: none; }
-.display-i  { display: inline; }
-.display-ib { display: inline-block; }
-.display-f  { display: flex; }
-.display-g  { display: grid; }
+.dn {    display: none; }
+.di {    display: inline; }
+.db {    display: block; }
+.dib {   display: inline-block; }
+.dit {   display: inline-table; }
+.dt  {   display: table; }
+.dflex { display: flex; }
+.dgrid { display: grid; }
 
 
 
@@ -35,20 +37,48 @@
 
 
 /*-------------------
-      Alignments
+      Text align
 --------------------*/
 
-// align text
-.al-txt-l  { text-align: left; }
-.al-txt-r  { text-align: right; }
-.al-txt-c  { text-align: center; }
-.al-txt-j  { text-align: justify; }
+/*
+	Base:
+	t = text-align
+	
+	Modifiers
+    l = left
+    r = right
+    c = center
+    j = justify
+    
+	Media Query Extensions:
+     -sm = min-width $sm
+     -md = min-width $md
+     -lg = min-width $lg
+*/
+.tl  { text-align: left; }
+.tr  { text-align: right; }
+.tc  { text-align: center; }
+.tj  { text-align: justify; }
 
-// align box / container
-.al-box-s { align-self: start;}
-.al-box-e { align-self: end;}
-.al-box-l { justify-self: start;}
-.al-box-r { justify-self: end;}
+@include sm {
+	.tl-sm  { text-align: left; }
+	.tr-sm  { text-align: right; }
+	.tc-sm  { text-align: center; }
+	.tj-sm  { text-align: justify; }
+}
+@include md {
+	.tl-md  { text-align: left; }
+	.tr-md  { text-align: right; }
+	.tc-md  { text-align: center; }
+	.tj-md  { text-align: justify; }
+}
+@include lg {
+	.tl-lg  { text-align: left; }
+	.tr-lg  { text-align: right; }
+	.tc-lg  { text-align: center; }
+	.tj-lg  { text-align: justify; }
+}
+
 
 
 

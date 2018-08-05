@@ -180,7 +180,6 @@ $component: ani;
 	&--scale-in-down {
 		animation-name: scale-in-down;
 		transform-origin: 0 0;
-		animation-duration: $timing-medium;
 	}
 	
 	@keyframes fade-out-up {

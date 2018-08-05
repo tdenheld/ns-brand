@@ -2,17 +2,9 @@
       Animation
 --------------------*/
 
-$timing-very-short:			100ms;
-$timing-short: 				200ms;
-$timing-medium: 			350ms;
-$timing-long: 				600ms;
-$timing-very-long:			1s;
-
 $ease:						cubic-bezier(0.700, 0.270, 0.270, 1);
 $easeInOutExpo:				cubic-bezier(1.000, 0.000, 0.000, 1);
-$fade-all: 					all $timing-medium $ease;
-
-$delay-increment:			$timing-very-short;
+$fade-all: 					all 300ms $ease;
 
 
 /*-------------------
