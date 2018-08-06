@@ -39,9 +39,7 @@ $quarter-gutter:			$grid-gutter-width / 4;
 
 $navbar-height: 			60px;
 $subnav-breakpoint:			822px;
-
-$gradient-opacity: 			0.35;
-$gradient-opacity-strong: 	0.48;
+$button-height:				45px;
 
 $box-shadow-soft:			0 2px 35px rgba($ns-black, 0.1);
 $box-shadow-medium:			0 5px 35px rgba($ns-black, 0.15);
@@ -57,7 +55,3 @@ $gradient-tile: 			linear-gradient(to bottom,
 							rgba($ns-black, 0) 10%,
 							rgba($ns-black, 0.55) 60%,
 							rgba($ns-black, 0.85) 100%);
-							
-$base-tile-height:			260px;
-$tile-border-bottom-height: 4px;
-$button-height:				45px;
