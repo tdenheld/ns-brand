@@ -186,6 +186,47 @@
 
 
 
+/*-------------------
+      CSS grid
+--------------------*/
+
+.items-start    { align-items: flex-start; }
+.items-end      { align-items: flex-end; }
+.items-center   { align-items: center; }
+.items-baseline { align-items: baseline; }
+.items-stretch  { align-items: stretch; }
+
+.self-start    { align-self: flex-start; }
+.self-end      { align-self: flex-end; }
+.self-center   { align-self: center; }
+.self-baseline { align-self: baseline; }
+.self-stretch  { align-self: stretch; }
+
+.justify-start   { justify-content: flex-start; }
+.justify-end     { justify-content: flex-end; }
+.justify-center  { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.justify-around  { justify-content: space-around; }
+
+.content-start   { align-content: flex-start; }
+.content-end     { align-content: flex-end; }
+.content-center  { align-content: center; }
+.content-between { align-content: space-between; }
+.content-around  { align-content: space-around; }
+.content-stretch { align-content: stretch; }
+
+.order-0 { order: 0; }
+.order-1 { order: 1; }
+.order-2 { order: 2; }
+.order-3 { order: 3; }
+.order-4 { order: 4; }
+.order-5 { order: 5; }
+.order-6 { order: 6; }
+.order-7 { order: 7; }
+.order-8 { order: 8; }
+.order-last { order: 99999; }
+
+
 
 
 /*-------------------
@@ -361,6 +402,7 @@
 --------------------*/
 
 /*
+	Base:
 	bs = box shadow
 	ts = text shadow
 */
@@ -384,6 +426,15 @@
 /*-------------------
      Backgrounds
 --------------------*/
+
+/*
+	Base:
+	bg = background
+	gd = gradient
+	
+	Modifiers:
+	-r = radial
+*/
 
 // fills
 // --------------------------------------------
@@ -412,3 +463,5 @@
 .gd-grey {background: linear-gradient(110deg, $ns-grey-8 0%, $ns-grey-7 100%);}	
 .gd-yellow {background: linear-gradient(110deg, $ns-yellow 0%, #FFE48A 100%);}	
 .gd-turquoise {background: linear-gradient(110deg, #79CEC3 0%, #BCFFF0 100%);}
+.gd-r-yellow {background: radial-gradient(circle at 70% 50%, #FFE48A 0%, $ns-yellow 100%);}
+.gd-r-vivid-blue {background: radial-gradient(circle at 70% 50%, #8ad4e4 0%, #0d6b9e 100%);}
