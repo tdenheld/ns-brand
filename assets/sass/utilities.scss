@@ -54,10 +54,10 @@
      -md = min-width $md
      -lg = min-width $lg
 */
-.tl  { text-align: left; }
-.tr  { text-align: right; }
-.tc  { text-align: center; }
-.tj  { text-align: justify; }
+.txt-l  { text-align: left; }
+.txt-r  { text-align: right; }
+.txt-c  { text-align: center; }
+.txt-j  { text-align: justify; }
 
 @include sm {
 	.tl-sm  { text-align: left; }
