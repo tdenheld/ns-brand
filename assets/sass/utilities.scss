@@ -796,6 +796,8 @@
 */
 
 // default border is $ns-grey-7 (#e8e8e6)
+.bo-none {border: none;}
+
 .bo-a {border: 1px solid $ns-grey-7;}
 .bo-h {border-right: 1px solid $ns-grey-7; border-left: 1px solid $ns-grey-7;}
 .bo-v {border-top: 1px solid $ns-grey-7; border-bottom: 1px solid $ns-grey-7;}
