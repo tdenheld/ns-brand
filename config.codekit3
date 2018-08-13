@@ -2489,6 +2489,20 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/components\/footer.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/components\/footer.html",
+		"oF": 0
+		},
+	"\/components\/header.html": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/components\/header.html",
+		"oF": 0
+		},
 	"\/favicon.png": {
 		"ft": 32768,
 		"iS": 1778,
