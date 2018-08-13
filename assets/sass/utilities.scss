@@ -850,6 +850,7 @@
 
 // box shadows
 // -------------------------
+.bs-none {box-shadow: none;}
 .bs-s {box-shadow: $box-shadow-soft;}
 .bs-m {box-shadow: $box-shadow-medium;}
 .bs-h {box-shadow: $box-shadow-hard;}

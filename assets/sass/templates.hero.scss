@@ -2,6 +2,11 @@
          Hero
 --------------------*/
 
+.tk-hero {
+	margin-bottom: $half-gutter;
+	box-shadow: $box-shadow-container;
+}
+
 .tk-flow {
 	@include full(absolute);
 	@include md {
@@ -48,31 +53,31 @@
 
 
 // tile in hero
-.tk-tile {
+.tk-tile-hero {
 	background: transparent;
 	box-shadow: none;
 	color: $ns-white;
 	text-shadow: 1px 1px 0 rgba($ns-grey, 0.35), 0 0 30px rgba($ns-grey, 0.25);
 }
 
-.tk-tile__heading {
+.tk-tile-hero__heading {
 	font-weight: bold;
 	color: $ns-white;
 }
 
-.tk-tile__price {
+.tk-tile-hero__price {
 	color: $ns-white;
 }
 
-.tk-tile--blue {
+.tk-tile-hero--blue {
 	color: $ns-blue;
 	text-shadow: none;
 	
-	.tk-tile__heading {
+	.tk-tile-hero__heading {
 		color: $ns-blue;
 	}
 	
-	.tk-tile__price {
+	.tk-tile-hero__price {
 		color: $ns-blue;
 	}
 }
@@ -111,11 +116,20 @@
 	height: 180px;
 	object-fit: cover;
 	object-position: 0 20%;
-	border: 2px solid rgba($ns-white, 0.6);
+	//border: 2px solid rgba($ns-white, 0.6);
 	transition: all 250ms $ease;
 	
 	&:hover {
 		box-shadow: 0 2px 60px rgba($ns-grey, 0.2);
 		transform: scale(1.03);
 	}
+}
+
+// buttons
+.tk-btn-small {
+	height: 38px;
+	font-size: 14px;
+	line-height: 1;
+	border-radius: 19px;
+	width: auto !important;
 }

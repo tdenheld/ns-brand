@@ -43,3 +43,9 @@ h5,
 h6 {
 	letter-spacing: -0.3px;
 }
+
+.rppb-plan-button {
+	@include sm {
+		margin-left: $half-gutter !important;
+	}
+}
