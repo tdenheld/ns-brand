@@ -116,20 +116,11 @@
 	height: 180px;
 	object-fit: cover;
 	object-position: 0 20%;
-	//border: 2px solid rgba($ns-white, 0.6);
+	border: 2px solid rgba($ns-white, 0.6);
 	transition: all 250ms $ease;
 	
 	&:hover {
 		box-shadow: 0 2px 60px rgba($ns-grey, 0.2);
 		transform: scale(1.03);
 	}
-}
-
-// buttons
-.tk-btn-small {
-	height: 38px;
-	font-size: 14px;
-	line-height: 1;
-	border-radius: 19px;
-	width: auto !important;
 }
