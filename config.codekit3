@@ -4475,6 +4475,13 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/ns-brand.code-workspace": {
+		"cB": 0,
+		"ft": 8192,
+		"oA": 0,
+		"oAP": "\/ns-brand.code-workspace",
+		"oF": 0
+		},
 	"\/pages\/no1.0.html": {
 		"cB": 0,
 		"ft": 8192,

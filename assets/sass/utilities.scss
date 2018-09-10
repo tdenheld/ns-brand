@@ -84,8 +84,8 @@
 		.mb-#{$i}-sm {	@include spacer($i, margin-bottom); }
 		.ml-#{$i}-sm {	@include spacer($i, margin-left); }
 		.mr-#{$i}-sm {	@include spacer($i, margin-right); }
-				 -sm
-		// paddin-smg
+
+		// paddin-sm
 		.pa-#{$i}-sm {	@include spacer($i, padding); }
 		.ph-#{$i}-sm {	@include spacer($i, padding-left); @include spacer($i, padding-right); }
 		.pv-#{$i}-sm {	@include spacer($i, padding-top); @include spacer($i, padding-bottom); }
@@ -103,8 +103,8 @@
 		.mb-#{$i}-md {	@include spacer($i, margin-bottom); }
 		.ml-#{$i}-md {	@include spacer($i, margin-left); }
 		.mr-#{$i}-md {	@include spacer($i, margin-right); }
-				 -md
-		// paddin-mdg
+				 
+		// paddin-md
 		.pa-#{$i}-md {	@include spacer($i, padding); }
 		.ph-#{$i}-md {	@include spacer($i, padding-left); @include spacer($i, padding-right); }
 		.pv-#{$i}-md {	@include spacer($i, padding-top); @include spacer($i, padding-bottom); }
@@ -122,8 +122,8 @@
 		.mb-#{$i}-lg {	@include spacer($i, margin-bottom); }
 		.ml-#{$i}-lg {	@include spacer($i, margin-left); }
 		.mr-#{$i}-lg {	@include spacer($i, margin-right); }
-				 -lg
-		// paddin-lgg
+				 
+		// paddin-lg
 		.pa-#{$i}-lg {	@include spacer($i, padding); }
 		.ph-#{$i}-lg {	@include spacer($i, padding-left); @include spacer($i, padding-right); }
 		.pv-#{$i}-lg {	@include spacer($i, padding-top); @include spacer($i, padding-bottom); }
