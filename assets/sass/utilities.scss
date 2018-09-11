@@ -832,6 +832,7 @@
 
 // radius
 // --------------------------------------------
+.br-none {border-radius: none;}
 .br-4    {border-radius: 4px;}
 .br-8    {border-radius: 8px;}
 .br-12   {border-radius: 12px;}
@@ -860,6 +861,7 @@
 
 // text-shadows
 // -------------------------
+.ts-none {text-shadow: none;}
 .ts-1 {text-shadow: $text-shadow-1;}
 .ts-2 {text-shadow: $text-shadow-2;}
 .ts-t {text-shadow: $text-shadow-tile;}
