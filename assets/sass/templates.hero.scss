@@ -2,6 +2,9 @@
         Hero
 --------------------*/
 
+// vars
+$flow-left: calc(50% - 427px);
+
 .tk-hero {
 	margin-bottom: $half-gutter;
 	box-shadow: $box-shadow-container;
@@ -10,10 +13,7 @@
 .tk-flow {
 	@include full(absolute);
 	@include md {
-		left: 14%;
-	}
-	@include lg {
-		left: 25%;
+		left: $flow-left;
 	}
 	
 	svg {
@@ -22,7 +22,7 @@
 			width: auto;
 			height: 100%;
 		}
-		@media (min-width: 850px) {
+		@media (min-width: 860px) {
 			width: auto;
 			height: 100%;
 		}
@@ -35,10 +35,7 @@
 	width: 0;
 	height: 100%;	
 	@include md {
-		width: 14%;
-	}
-	@include lg {
-		width: 25%;
+		width: $flow-left;
 	}
 	
 	&--blue {
