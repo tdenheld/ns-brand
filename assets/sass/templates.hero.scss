@@ -65,7 +65,7 @@ $flow-left: calc(50% - 427px);
 		background-color: $ns-blue;
 	}
 
-	&--white {
+	&--white {	
 		background-color: $ns-white;
 	}
 }
@@ -81,7 +81,7 @@ $flow-left: calc(50% - 427px);
 }
 
 .tk-tile-hero--blue-txt {
-	color: #ns-blue;
+	color: $ns-blue;
 	text-shadow: 1px 1px 1px rgba($ns-white, 0.5);
 }
 
