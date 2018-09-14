@@ -2457,7 +2457,7 @@
 		"oS": 0,
 		"uL": 1
 		},
-	"\/assets\/sass\/templates.hero.scss": {
+	"\/assets\/sass\/templates.app.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -2465,7 +2465,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/assets\/sass\/templates.hero.css",
+		"oAP": "\/assets\/sass\/templates.app.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -2771,6 +2771,17 @@
 		"iS": 1224757,
 		"oA": 0,
 		"oAP": "\/media\/thumbs\/no1.01.png",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"oT": 1,
+		"q": 100
+		},
+	"\/media\/thumbs\/no1.02.png": {
+		"ft": 32768,
+		"iS": 779959,
+		"oA": 0,
+		"oAP": "\/media\/thumbs\/no1.02.png",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,
