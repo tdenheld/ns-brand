@@ -12,20 +12,11 @@ $flow-left: calc(50% - 427px);
 
 .tk-hero__gradient {
 	@include full(absolute);
-	background: linear-gradient(40deg, rgba($ns-black, 1) 20%, rgba($ns-black, 0) 90%);
-	opacity: 0.5;
+	background: linear-gradient(80deg, rgba($ns-black, 1) 20%, rgba($ns-black, 0.5) 100%);
+	opacity: 0.35;
 
 	@include sm {
-		opacity: 0.3;
 		background: linear-gradient(164deg, rgba($ns-black, 1) 20%, rgba($ns-black, 0) 90%);
-	}
-}
-
-.tk-hero__gradient--light-flow {
-	opacity: 0.6;
-
-	@include sm {
-		opacity: 0.4;
 	}
 }
 
