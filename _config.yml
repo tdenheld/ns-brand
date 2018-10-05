@@ -6,6 +6,12 @@ plugins:
 
 defaults:
   - scope:
+      path: "pages"
+    values:
+      layout: "page"
+      title: "Welkom op de website van NS"
+      planner: true
+  - scope:
       path: ""
     values:
       layout: "default"

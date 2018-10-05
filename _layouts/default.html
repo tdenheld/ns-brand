@@ -3,28 +3,28 @@
 
 <head>
 
-	<!-- META DATA -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta name="format-detection" content="telephone=no" />
-	<meta name="robots" content="noindex">
+    <!-- META DATA -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="robots" content="noindex">
 
-	<!-- DISPLAY ALL CHARACTER SYMBOLS -->
-	<meta charset="utf-8" />
+    <!-- DISPLAY ALL CHARACTER SYMBOLS -->
+    <meta charset="utf-8" />
 
-	<!-- FAVICON -->
-	<link rel="icon" type="image/png" href="/favicon.ico" />
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="/favicon.ico" />
 
-	<!-- LINKS -->
-	<link rel="stylesheet" type="text/css" href="/assets/css/ns.generic.min.css" />
-	<link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
-	<script src="/assets/js/modernizr.js"></script>
+    <!-- LINKS -->
+    <link rel="stylesheet" type="text/css" href="/assets/css/ns.generic.min.css" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
+    <script src="/assets/js/modernizr.js"></script>
 
-	<!-- TITLE -->
-	<title>{{page.title}}</title>
+    <!-- TITLE -->
+    <title>{{page.title}}</title>
 
 </head>
 
-<body {% if page.class %} class="{{ page.class }}"{% endif %}>
+<body {% if page.class %} class="{{ page.class }}" {% endif %}>
 
     {{ content }}
 
@@ -32,6 +32,21 @@
     <script src="/assets/js/ns.generic.min.js"></script>
     <script src="/assets/js/tk.generic.js"></script>
 
+    {% if page.planner %}
+    <script>
+        //<![CDATA[		
+        window.planbarConfiguration = {
+            staticFilePath: 'https://www.ns.nl/static/apps/rp-planbar-app/1.1.0/',
+            journeyPlannerPath: '/reisplanner'
+        }
+        //]]>
+    </script>
+    <script src="https://www.ns.nl/static/apps/rp-planbar-app/1.1.0/inline.bundle.js"></script>
+    <script src="https://www.ns.nl/static/apps/rp-planbar-app/1.1.0/polyfills.bundle.js"></script>
+    <script src="https://www.ns.nl/static/apps/rp-planbar-app/1.1.0/main.bundle.js"></script>
+    <script src="https://www.ns.nl/static/apps/gssp/1.2.0/js/gssp.js"></script>
+    {% endif %}
+    
 </body>
 
 </html>
