@@ -130,7 +130,19 @@ $flow-left: calc(50% - 427px);
 
 	@include md {
 		grid-template-columns: repeat(3, 1fr);
-	}
+    }
+    
+    &--s {
+        grid-template-columns: repeat(2, 1fr);
+
+        @include sm {
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        @include md {
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
 }
 
 .tk-overview__img-link {
@@ -152,7 +164,11 @@ $flow-left: calc(50% - 427px);
 	&:hover {
 		box-shadow: 0 2px 60px rgba($ns-grey, 0.2);
 		transform: scale(1.03);
-	}
+    }
+    
+    &--s {
+        height: 140px;
+    }
 }
 
 // misc
