@@ -77,8 +77,15 @@ $flow-left: calc(50% - 427px);
 }
 
 .tk-tile-hero__heading {
-	font-weight: bold;
-	color: $ns-white;
+    @include font-style(24px, bold, 1.3);
+
+    @include xs {
+        font-size: calculate-rem(28px);
+    }
+
+    @include sm {
+        font-size: calculate-rem(38px);
+    }
 }
 
 .tk-tile-hero__price {
