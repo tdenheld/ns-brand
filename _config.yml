@@ -1,9 +1,6 @@
 sass:
     style: compressed
 
-plugins:
-  - jekyll-autoprefixer
-
 defaults:
   - scope:
       path: "pages"
