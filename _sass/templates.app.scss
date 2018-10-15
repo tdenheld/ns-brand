@@ -65,10 +65,15 @@ $flow-left: calc(50% - 427px);
 
 // tile in hero
 .tk-tile-hero {
+    padding: 1rem;
 	background: transparent;
 	box-shadow: none;
 	color: $ns-white;
-	text-shadow: 1px 1px 0 rgba($ns-grey, 0.35), 0 0 30px rgba($ns-grey, 0.25);
+    text-shadow: 1px 1px 0 rgba($ns-grey, 0.35), 0 0 30px rgba($ns-grey, 0.25);
+
+    @include sm {
+        padding: 2rem;
+    }
 }
 
 .tk-tile-hero--blue-txt {
