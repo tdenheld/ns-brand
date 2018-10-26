@@ -1,0 +1,113 @@
+---
+no-rp: true
+---
+
+<head>
+    <!-- Page specific overrides -->
+    <style type="text/css">
+        .rppb-nav-button {
+            display: none;
+        }
+
+        .rppb-date-button__date {
+            width: auto !important;
+        }
+
+        .rppb-plan-button {
+            border-radius: 24px;
+            width: 180px !important;
+        }
+
+        .rppb-location-input label,
+        .rppb-location-input input {
+            border-radius: 4px;
+        }
+
+        .rppb-options-button {
+            border-radius: 4px;
+        }
+
+        .checkbox__label:before {
+            border-radius: 2px;
+        }
+
+        @media (max-width: 640px) {
+            .rppb-plan-button {
+                width: 100% !important;
+            }
+            .rppb-buttons-right {
+                padding-top: 0 !important;
+                margin-top: 0 !important;
+            }
+            .rppb-more-options-extratransfertime-toggle {
+                padding-bottom: 28px;
+            }
+        }
+    </style>
+</head>
+
+<!-- Travel planner -->
+<div class="bg-yellow pt-3">
+    <div class="container" data-noindex="true">
+        <div class="grid" data-controller="generic/ui/ResponsiveGrid">
+            <div class="grid__unit s-4-4 m-12-12 l-12-12">
+                <div class="tile tile--ns-yellow tile--smallGradient tile--slim bs-none pt-0 pt-4-sm pb-12">
+                    <div class="tile__header">
+                        <header class="headingGroup" data-type="cms-ArticleHeader">
+                            <h1 class="headingXL fw-b">Plan je reis</h1>
+                            <div class="mb-2"></div>
+                        </header>
+                    </div>
+                    <div rio-pb-app class="tile__content"></div>
+                    <div class="mb-6-sm"></div>
+                    <div class="tile__footer" data-type="reisplannerbalk-footer">
+                        <div class="separator--noTop separator--alphaGray  tile__footerContent">
+                            <ul class="list list--horizontal list--hasIcon">
+                                <li class="list__item">
+                                    <a class="arrowLink--rightBlue" href="/reisinformatie/actuele-situatie-op-het-spoor">
+                                        <span class="icon icon--alert icon--nsRed"></span>
+                                        <span class="s-visible--inline-block m-hidden">
+                                            Verstoringen (5)</span>
+                                        <span class="s-hidden m-visible--inline-block">
+                                            Storingen en werkzaamheden (5)</span>
+                                    </a>
+                                </li>
+                                <li class="list__item s-hidden m-visible">
+                                    <a class="arrowLink--rightBlue" href="/reisinformatie">Meer reisinformatie</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Hero -->
+<div class="container">
+    <div class="inv-hero">
+        <figure class="inv-hero__img"></figure>
+        <div class="tk-hero__gradient"></div>
+        <div class="a a-fi a-del-600">
+            <div class="inv-hero__flow o-70">
+                <div></div>
+                <div class="lh-none" include="/assets/img/flows/flow-gradient-white.svg"></div>
+                <div class="inv-hero__white-gradient"></div>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="grid__unit s-4-4 m-10-12 ml-7-12 l-6-12 pt-0">
+                <div class="inv-hero__tile">
+                    <h3 class="inv-hero__heading lh-title fw-b f-white ts-t">
+                        Zin in een dagje Amsterdam?
+                    </h3>
+                    <p class="headingM f-white ts-t mb-2">
+                        Trein + Koffie
+                    </p>
+                    <button class="button button--nsYellow btn-small btn-small--rounded">Bekijk meer</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

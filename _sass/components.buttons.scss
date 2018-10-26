@@ -95,8 +95,15 @@
 	height: 38px;
 	font-size: 14px;
 	line-height: 1;
-	border-radius: 19px;
-	width: auto !important;
+    width: auto !important;
+}
+
+.btn-small--rounded {
+    border-radius: 4px;
+}
+
+.btn-small--pill {
+    border-radius: 19px;
 }
 
 // round scroll down button

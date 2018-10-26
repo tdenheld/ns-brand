@@ -7,7 +7,6 @@ $flow-left: calc(50% - 427px);
 
 .tk-hero {
 	margin-bottom: $half-gutter;
-	box-shadow: $box-shadow-container;
 }
 
 .tk-hero__gradient {
@@ -28,7 +27,7 @@ $flow-left: calc(50% - 427px);
 	}
 
 	svg {
-		width: 100%;
+        width: 100%;
 
 		@media (min-width: 500px) and (max-width: 639px) {
 			width: auto;
@@ -69,7 +68,7 @@ $flow-left: calc(50% - 427px);
 	background: transparent;
 	box-shadow: none;
 	color: $ns-white;
-    text-shadow: 1px 1px 0 rgba($ns-grey, 0.35), 0 0 30px rgba($ns-grey, 0.25);
+    text-shadow: $text-shadow-tile;
 
     @include sm {
         padding: 2rem;

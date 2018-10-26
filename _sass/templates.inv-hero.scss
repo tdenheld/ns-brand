@@ -1,0 +1,63 @@
+/*-------------------
+    Hero inverted
+--------------------*/
+
+.inv-hero {
+    position: relative;
+    margin-top: -77px;
+    height: 380px;
+
+    @include sm {
+        margin-bottom: $half-gutter;
+    }
+}
+
+.inv-hero__img {
+    @include full(absolute);
+    @include bg(cover);
+    background-image: url("/assets/img/heros/hero_koffie.jpg");
+}
+
+.inv-hero__flow {
+    @include full(absolute);
+    display: grid;
+    grid-template-rows: 1fr max-content 1fr;
+    align-items: center;
+
+    @include md {
+        left: $flow-left;
+    }
+
+    svg {
+        transform: rotate(180deg);
+        width: 100%;
+        @media (min-width: 718px) {
+            width: auto;
+            height: 380px;
+        }
+    }
+}
+
+.inv-hero__white-gradient {
+    height: 100%;
+    background: linear-gradient(to right, $ns-white 0%, rgba($ns-white, 0) 100%);
+}
+
+.inv-hero__tile {
+    padding: 20px;
+    @include sm {
+        padding: 2rem;
+    }
+}
+
+.inv-hero__heading {
+    @include font-style(28px, bold, 1.25);
+
+    @include sm {
+        font-size: calculate-rem(38px);
+    }
+
+    @include md {
+        font-size: calculate-rem(48px);
+    }
+}

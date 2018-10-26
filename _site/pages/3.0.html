@@ -1533,26 +1533,63 @@
 </header>
 <div class="content">
     <head>
+    <!-- Page specific overrides -->
     <style type="text/css">
-        rio-pbm-travel-type-toggle,
-        .rppb-now-container {
-            display: none !important;
+        .rppb-nav-button {
+            display: none;
+        }
+
+        .rppb-date-button__date {
+            width: auto !important;
+        }
+
+        .rppb-plan-button {
+            border-radius: 24px;
+            width: 180px !important;
+        }
+
+        .rppb-location-input label,
+        .rppb-location-input input {
+            border-radius: 4px;
+        }
+
+        .rppb-options-button {
+            border-radius: 4px;
+        }
+
+        .checkbox__label:before {
+            border-radius: 2px;
+        }
+
+        @media (max-width: 640px) {
+            .rppb-plan-button {
+                width: 100% !important;
+            }
+            .rppb-buttons-right {
+                padding-top: 0 !important;
+                margin-top: 0 !important;
+            }
+            .rppb-more-options-extratransfertime-toggle {
+                padding-bottom: 28px;
+            }
         }
     </style>
 </head>
 
+<!-- Travel planner -->
 <div class="bg-yellow pt-3">
     <div class="container" data-noindex="true">
         <div class="grid" data-controller="generic/ui/ResponsiveGrid">
             <div class="grid__unit s-4-4 m-12-12 l-12-12">
-                <div class="tile tile--ns-yellow tile--smallGradient tile--slim bs-none pv-0">
+                <div class="tile tile--ns-yellow tile--smallGradient tile--slim bs-none pt-0 pt-4-sm pb-12">
                     <div class="tile__header">
                         <header class="headingGroup" data-type="cms-ArticleHeader">
-                            <h1 class="headingXL">Plan je reis</h1>
-                            <div class="mb-4"></div>
+                            <h1 class="headingXL fw-b">Plan je reis</h1>
+                            <div class="mb-2"></div>
                         </header>
                     </div>
                     <div rio-pb-app class="tile__content"></div>
+                    <div class="mb-6-sm"></div>
                     <div class="tile__footer" data-type="reisplannerbalk-footer">
                         <div class="separator--noTop separator--alphaGray  tile__footerContent">
                             <ul class="list list--horizontal list--hasIcon">
@@ -1576,40 +1613,30 @@
         </div>
     </div>
 </div>
-<div class="container container--extended" data-type="cms-HeroContainer">
-    <div class="hero hero--major tk-hero" data-noindex="true">
-        <div class="hero__loaderContainer">
-            <div class="heroVisual">
-                <div class="container heroVisual__content">
-                    <div class="grid">
-                        <div class="grid__unit s-4-4 m-10-12 l-6-12">
-                            <div class="tile tk-tile-hero">
-                                <div class="tile__title">
-                                    <h3 class="tile__heading tk-tile-hero__heading headingXL fw-b f-white">Zin in een dagje
-                                        Amsterdam?</h3>
-                                </div>
-                                <div class="tile__content">
-                                    <p class="mb-1 mb-4-md">Trein + Koffie</p>
-                                    <div class="pricedetails mb-1">
-                                        <p>
-                                            <span class="pricedetails__price tk-tile-hero__price fw-b">
-                                                € 19
-                                            </span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <button class="button button--nsYellow btn-small btn-small--pill">Bekijk meer</button>
-                            </div>
-                        </div>
-                    </div>
+
+<!-- Hero -->
+<div class="container">
+    <div class="inv-hero">
+        <figure class="inv-hero__img"></figure>
+        <div class="tk-hero__gradient"></div>
+        <div class="a a-fi a-del-600">
+            <div class="inv-hero__flow o-70">
+                <div></div>
+                <div class="lh-none" include="/assets/img/flows/flow-gradient-white.svg"></div>
+                <div class="inv-hero__white-gradient"></div>
+            </div>
+        </div>
+        <div class="grid">
+            <div class="grid__unit s-4-4 m-10-12 ml-7-12 l-6-12 pt-0">
+                <div class="inv-hero__tile">
+                    <h3 class="inv-hero__heading lh-title fw-b f-white ts-t">
+                        Zin in een dagje Amsterdam?
+                    </h3>
+                    <p class="headingM f-white ts-t mb-2">
+                        Trein + Koffie
+                    </p>
+                    <button class="button button--nsYellow btn-small btn-small--rounded">Bekijk meer</button>
                 </div>
-                <picture class="heroVisual__picture">
-                    <source srcset="/assets/img/heros/hero_asd.jpg" />
-                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""
-                        class="img--contain" />
-                </picture>
-                <div class="tk-hero__gradient"></div>
-                <div class="tk-flow o-60" include="/assets/img/flows/flow-gradient-white.svg"></div>
             </div>
         </div>
     </div>
