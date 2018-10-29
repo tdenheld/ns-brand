@@ -51,13 +51,19 @@ no-rp: true
                 padding-bottom: 28px;
             }
 
+            rio-pbm-options-summary {
+                display: none;
+            }
+
             #rppb-options-button-more {
-                width: 120px;
-                margin-right: 14px;
+                display: none;
+                /* width: 120px; */
             }
 
             .rppb-plan-button {
-                width: calc(100% - 134px) !important;
+                margin-top: 10px;
+                width: 100% !important;
+                /* width: calc(100% - 134px) !important; */
             }
         }
     </style>
@@ -69,7 +75,7 @@ no-rp: true
         <div class="grid" data-controller="generic/ui/ResponsiveGrid">
             <div class="grid__unit s-4-4 m-12-12 l-12-12">
                 <div class="tile tile--slim bg-none bs-none pt-0 pt-4-sm pb-12">
-                    <div class="tile__header">
+                    <div class="tile__header hidden-xs">
                         <header class="headingGroup" data-type="cms-ArticleHeader">
                             <h1 class="headingXL fw-b">Plan je reis</h1>
                             <div class="mb-2"></div>
