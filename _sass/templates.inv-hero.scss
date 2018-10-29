@@ -75,11 +75,7 @@
 }
 
 .inv-hero__heading {
-    @include font-style(28px, bold, 1.25);
-
-    @include xs {
-        font-size: calculate-rem(32px);
-    }
+    @include font-style(32px, bold, 1.25);
 
     @include sm {
         font-size: calculate-rem(38px);
