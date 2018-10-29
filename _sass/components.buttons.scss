@@ -94,8 +94,10 @@
 .btn-small {
 	height: 38px;
 	font-size: 14px;
-	line-height: 1;
-    width: auto !important;
+    line-height: 1;
+    min-width: auto;
+    padding: 0 12px 2px;
+    width: auto;
 }
 
 .btn-small--rounded {
@@ -104,6 +106,7 @@
 
 .btn-small--pill {
     border-radius: 19px;
+    padding: 0 1rem 2px;
 }
 
 // round scroll down button

@@ -2,10 +2,12 @@
 layout: default
 ---
 
+
 {% include header.html %}
-<div class="content">
+<div class="content a a-fi">
     {{ content }}
     {% unless page.no-rp %} {% include planner.html %} {% endunless %}
     {% include tiles.html %}
 </div>
 {% include footer.html %}
+

@@ -6,6 +6,7 @@
     position: relative;
     margin-top: -77px;
     height: 380px;
+    margin-bottom: $quarter-gutter;
 
     @include sm {
         margin-bottom: $half-gutter;
@@ -15,7 +16,7 @@
 .inv-hero__img {
     @include full(absolute);
     @include bg(cover);
-    background-image: url("/assets/img/heros/hero_koffie.jpg");
+    background-image: url("/assets/img/heros/hero_hert.jpg");
 }
 
 .inv-hero__flow {
@@ -52,6 +53,10 @@
 
 .inv-hero__heading {
     @include font-style(28px, bold, 1.25);
+
+    @include xs {
+        font-size: calculate-rem(32px);
+    }
 
     @include sm {
         font-size: calculate-rem(38px);

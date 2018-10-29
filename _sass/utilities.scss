@@ -890,6 +890,7 @@
 
 // fills
 // --------------------------------------------
+.bg-none {background: none;}
 .bg-blue {background-color: $ns-blue;}
 .bg-yellow {background-color: $ns-yellow;}
 .bg-light-blue {background-color: $ns-light-blue;}
@@ -919,6 +920,7 @@
 
 // radial
 .gd-r-yellow {background: radial-gradient(circle at 50% 50%, #FFE48A 0%, $ns-yellow 100%);}
+.gd-r-yellow-subtle {background: radial-gradient(circle at 50% 50%, #FFD342 0%, $ns-yellow 100%);}
 .gd-r70-50-yellow {background: radial-gradient(circle at 70% 50%, #FFE48A 0%, $ns-yellow 100%);}
 .gd-r30-50-yellow {background: radial-gradient(circle at 50% 70%, #FFE48A 0%, $ns-yellow 100%);}
 .gd-r-vivid {background: radial-gradient(circle at 50% 50%, #8ad4e4 0%, #0d6b9e 100%);}

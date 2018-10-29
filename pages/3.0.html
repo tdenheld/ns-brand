@@ -30,28 +30,45 @@ no-rp: true
         .checkbox__label:before {
             border-radius: 2px;
         }
-
+        
+        /* mobile */
         @media (max-width: 640px) {
-            .rppb-plan-button {
-                width: 100% !important;
+            rio-pbm-arrival {
+                position: relative;
+                top: -14px;
             }
+
+            .rppb-buttons-left {
+                margin-top: 0 !important;
+            }
+
             .rppb-buttons-right {
                 padding-top: 0 !important;
                 margin-top: 0 !important;
             }
+
             .rppb-more-options-extratransfertime-toggle {
                 padding-bottom: 28px;
+            }
+
+            #rppb-options-button-more {
+                width: 120px;
+                margin-right: 14px;
+            }
+
+            .rppb-plan-button {
+                width: calc(100% - 134px) !important;
             }
         }
     </style>
 </head>
 
 <!-- Travel planner -->
-<div class="bg-yellow pt-3">
+<div class="gd-r-yellow-subtle pt-3 a a-fi a-del-100">
     <div class="container" data-noindex="true">
         <div class="grid" data-controller="generic/ui/ResponsiveGrid">
             <div class="grid__unit s-4-4 m-12-12 l-12-12">
-                <div class="tile tile--ns-yellow tile--smallGradient tile--slim bs-none pt-0 pt-4-sm pb-12">
+                <div class="tile tile--slim bg-none bs-none pt-0 pt-4-sm pb-12">
                     <div class="tile__header">
                         <header class="headingGroup" data-type="cms-ArticleHeader">
                             <h1 class="headingXL fw-b">Plan je reis</h1>
@@ -85,7 +102,7 @@ no-rp: true
 </div>
 
 <!-- Hero -->
-<div class="container">
+<div class="container a a-fi a-del-200">
     <div class="inv-hero">
         <figure class="inv-hero__img"></figure>
         <div class="tk-hero__gradient"></div>
@@ -99,13 +116,17 @@ no-rp: true
         <div class="grid">
             <div class="grid__unit s-4-4 m-10-12 ml-7-12 l-6-12 pt-0">
                 <div class="inv-hero__tile">
-                    <h3 class="inv-hero__heading lh-title fw-b f-white ts-t">
-                        Zin in een dagje Amsterdam?
+                    <h3 class="inv-hero__heading lh-title fw-b f-white ts-t a a-fi-right-200px a-stag">
+                        Dagje Dierenpark Amersfoort
                     </h3>
-                    <p class="headingM f-white ts-t mb-2">
-                        Trein + Koffie
+                    <p class="headingM f-white ts-t mb-1 a a-fi-right-200px a-stag">
+                        Dagretour + Entree
                     </p>
-                    <button class="button button--nsYellow btn-small btn-small--rounded">Bekijk meer</button>
+                    <div class="inv-hero__pricedetails mb-2 a a-fi-right-200px a-stag">
+                        <span class="headingXL f-white fw-b lh-title ts-t">€ 35</span>
+                        <span class="f-white ts-t">/ mnd</span>
+                    </div>
+                    <button class="button button--nsYellow btn-small btn-small--rounded a a-fi-right-200px a-stag">Bekijk meer</button>
                 </div>
             </div>
         </div>

@@ -24,7 +24,7 @@
 
 </head>
 
-<body {% if page.class %} class="{{ page.class }}" {% endif %}>
+<body class="{% if page.body-class %} {{ page.body-class }} {% endif %}">
 
     {{ content }}
 
