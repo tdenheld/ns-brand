@@ -24,9 +24,13 @@
 	animation-timing-function: $ease;
 }
 
+.a-l {
+    animation: 600ms infinite linear;
+}
+
 // durations & delays
 // --------------------------------
-@for $i from 1 through 64 {
+@for $i from 0 through 64 {
 	$x: $i * 50;
 	$d: $x * 1ms;
 	
@@ -44,6 +48,14 @@
     @for $i from 1 through 12 {
         &:nth-child(#{$i}) {
             animation-duration: (500ms + ($i * 200));
+        }
+    }
+}
+.a-stag-del {
+    @for $i from 1 through 12 {
+        &:nth-child(#{$i}) {
+            animation-duration: (300ms + ($i * 150));
+            animation-delay: (200ms + ($i * 80));
         }
     }
 }
@@ -91,6 +103,19 @@
 }
 .a-fi-up {animation-name: fade-in-up;}
 
+@keyframes fade-in-up-medium {
+	from {
+		opacity: 0;
+		transform: translate3d(0, 100px, 0);
+	}
+
+	to {
+		opacity: 1;
+		transform: none;
+	}
+}
+.a-fi-up-medium {animation-name: fade-in-up-medium;}
+
 @keyframes fade-in-up-small {
 	from {
 		opacity: 0;
@@ -102,7 +127,7 @@
 		transform: none;
 	}
 }
-.a-fi-up-s {animation-name: fade-in-up-small;}
+.a-fi-up-small {animation-name: fade-in-up-small;}
 
 @keyframes fade-in-left {
 	from {
@@ -219,3 +244,16 @@
 	}
 }
 .a-fo-up-s {animation-name: fade-out-up-small;}
+
+// infinite
+@keyframes rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+.a-rotate {
+    animation-name: rotate;
+}

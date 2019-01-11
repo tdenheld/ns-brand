@@ -17,9 +17,7 @@
 // Objects
 
 // Components
-@import "components.animate";
 @import "components.buttons";
-@import "components.transitions";
 @import "components.switch";
 
 // Templates
@@ -27,4 +25,6 @@
 @import "templates.inv-hero";
 
 // Utilities
-@import "utilities";
+@import "utilities.animate";
+@import "utilities.transitions";
+@import "utilities.tachyons";

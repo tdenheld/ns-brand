@@ -14,6 +14,38 @@
 
 
 
+// overflows | positions
+// ----------------------------------------------------------------------
+.o-hidden { overflow: hidden; }
+.pos-r { position: relative; }
+.pos-a { position: absolute; }
+.pos-f { position: fixed; }
+.pos-s { position: static; }
+.pos-i { position: inherit; }
+
+// nudge elements a tiny bit
+@for $i from 0 through 14 {
+    $y: $i * 1px;
+    .top-#{$i}px {top: $y;}
+    .top-min-#{$i}px {top: -$y;}
+    .bottom-#{$i}px {bottom: $y;}
+    .bottom-min-#{$i}px {bottom: -$y;}
+    .left-#{$i}px {left: $y;}
+    .left-min-#{$i}px {left: -$y;}
+    .right-#{$i}px {right: $y;}
+    .right-min-#{$i}px {right: -$y;}
+}
+
+// z-index
+.z-1   { z-index: 1; }
+.z-2   { z-index: 2; }
+.z-3   { z-index: 3; }
+.z-9   { z-index: 9; }
+.z-99  { z-index: 99; }
+.z-999 { z-index: 999; }
+
+
+
 // full fills
 // ----------------------------------------------------------------------
 .full-absolute { @include full(absolute); }
@@ -30,6 +62,14 @@
 .rotate-225 { transform: rotate(225deg); }
 .rotate-270 { transform: rotate(270deg); }
 .rotate-315 { transform: rotate(315deg); }
+
+.rotate-svg-45  { svg { transform: rotate(45deg); }}
+.rotate-svg-90  { svg { transform: rotate(90deg); }}
+.rotate-svg-135 { svg { transform: rotate(135deg); }}
+.rotate-svg-180 { svg { transform: rotate(180deg); }}
+.rotate-svg-225 { svg { transform: rotate(225deg); }}
+.rotate-svg-270 { svg { transform: rotate(270deg); }}
+.rotate-svg-315 { svg { transform: rotate(315deg); }}
 
 
 
@@ -53,9 +93,37 @@
 	
 	Media Query Extensions:
      -sm = min-width $sm
+     -sm-max = min-width $sm-max (only mobile)
      -md = min-width $md
      -lg = min-width $lg
 */
+
+// auto-margins
+// rem padding (NS tile padding)
+.ma-auto {margin: auto;}
+.mh-auto {margin: 0 auto;}
+.mv-auto {margin: auto 0;}
+.pa-2r {padding: 2rem;}
+
+@include sm {
+    .ma-auto-sm {margin: auto;}
+    .mh-auto-sm {margin: 0 auto;}
+    .mv-auto-sm {margin: auto 0;}
+    .pa-2r-sm {padding: 2rem;}    
+}
+@include md {
+    .ma-auto-md {margin: auto;}
+    .mh-auto-md {margin: 0 auto;}
+    .mv-auto-md {margin: auto 0;}
+    .pa-2r-md {padding: 2rem;}  
+}
+@include lg {
+    .ma-auto-lg {margin: auto;}
+    .mh-auto-lg {margin: 0 auto;}
+    .mv-auto-lg {margin: auto 0;}
+    .pa-2r-lg {padding: 2rem;}   
+}
+
 @for $i from 0 through 20 {	
 	// margin
 	.ma-#{$i} {	@include spacer($i, margin); }
@@ -73,8 +141,27 @@
 	.pt-#{$i} {	@include spacer($i, padding-top); }
 	.pb-#{$i} {	@include spacer($i, padding-bottom); }
 	.pl-#{$i} {	@include spacer($i, padding-left); }
-	.pr-#{$i} {	@include spacer($i, padding-right); }
-		
+    .pr-#{$i} {	@include spacer($i, padding-right); }
+    
+    @include sm-max {
+        // margin
+        .ma-#{$i}-sm-max {	@include spacer($i, margin); }
+        .mh-#{$i}-sm-max {	@include spacer($i, margin-left); @include spacer($i, margin-right); }
+        .mv-#{$i}-sm-max {	@include spacer($i, margin-top); @include spacer($i, margin-bottom); }
+        .mt-#{$i}-sm-max {	@include spacer($i, margin-top); }
+        .mb-#{$i}-sm-max {	@include spacer($i, margin-bottom); }
+        .ml-#{$i}-sm-max {	@include spacer($i, margin-left); }
+        .mr-#{$i}-sm-max {	@include spacer($i, margin-right); }
+
+        // padding
+        .pa-#{$i}-sm-max {	@include spacer($i, padding); }
+        .ph-#{$i}-sm-max {	@include spacer($i, padding-left); @include spacer($i, padding-right); }
+        .pv-#{$i}-sm-max {	@include spacer($i, padding-top); @include spacer($i, padding-bottom); }
+        .pt-#{$i}-sm-max {	@include spacer($i, padding-top); }
+        .pb-#{$i}-sm-max {	@include spacer($i, padding-bottom); }
+        .pl-#{$i}-sm-max {	@include spacer($i, padding-left); }
+        .pr-#{$i}-sm-max {	@include spacer($i, padding-right); }
+    }		
 	@include sm {
 		// margin
 		.ma-#{$i}-sm {	@include spacer($i, margin); }
@@ -133,7 +220,6 @@
 		.pr-#{$i}-lg {	@include spacer($i, padding-right); }
 	}
 }
-
 
 
 /*-------------------
@@ -213,6 +299,15 @@
 	.w-100-lg { width: 100%; }
 }
 
+// max widths
+@for $i from 0 through 32 {
+    $x: $i * 50;
+    $y: $i * 50px;
+    .mxw-#{$x} {
+        max-width: #{$y};
+    }
+}
+
 
 
 
@@ -226,7 +321,7 @@
 
 // gap
 // -------------------------
-@for $i from 0 through 8 {
+@for $i from 0 through 12 {
 	.gap-#{$i} { @include spacer($i, grid-gap); }
 	.col-gap-#{$i} { @include spacer($i, grid-column-gap); }
 	.row-gap-#{$i} { @include spacer($i, grid-row-gap); }
@@ -537,10 +632,8 @@
 .o-025 { opacity: .025; }
 .o-0   { opacity: 0;    }
 
-// visibility
+// visibility breakpoints
 // ----------------------------------------------------------------------
-.visible { visibility: visible; }
-.hidden {  visibility: hidden; } 
 .visible-xs { @include sm     { display: none; }}
 .hidden-xs {  @include sm-max { display: none; }}
 .hidden-sm {  @include sm-ex  { display: none; }}
@@ -677,6 +770,8 @@
 .f-yellow {color: $ns-yellow;}
 .f-blue {color: $ns-blue;}
 .f-light-blue {color: $ns-light-blue;}
+.f-green-sexy {color: $ns-green-sexy;}
+.f-red {color: $ns-red-alert;}
 .f-grey {color: $ns-grey;}
 .f-grey-2 {color: $ns-grey-2;}
 .f-grey-3 {color: $ns-grey-3;}
@@ -758,6 +853,8 @@
 .svg-light-blue svg {fill: $ns-light-blue;}
 .svg-red svg {fill: $ns-red-alert;}
 .svg-white svg {fill: $ns-white;}
+.svg-green svg {fill: $ns-green;}
+.svg-green-sexy svg {fill: $ns-green-sexy;}
 .svg-grey svg {fill: $ns-grey;}
 .svg-grey-2 svg {fill: $ns-grey-2;}
 .svg-grey-3 svg {fill: $ns-grey-3;}
@@ -767,6 +864,7 @@
 .svg-grey-6b svg {fill: $ns-grey-6b;}
 .svg-grey-7 svg {fill: $ns-grey-7;}
 .svg-grey-8 svg {fill: $ns-grey-8;}
+.svg-link { svg {cursor: pointer; transition: $fade-link; fill: $ns-light-blue;} &:hover {svg {fill: $ns-blue;}}}
 
 
 
@@ -830,6 +928,9 @@
 .bo-l-a15 {border-left: 1px solid $ns-grey-alpha-15;}
 .bo-r-a15 {border-right: 1px solid $ns-grey-alpha-15;}
 
+.bo-b-blue {border-bottom: 1px solid $ns-blue;}
+.bo-b-blue-2px {border-bottom: 2px solid $ns-blue;}
+
 // radius
 // --------------------------------------------
 .br-none {border-radius: none;}
@@ -837,6 +938,7 @@
 .br-8    {border-radius: 8px;}
 .br-12   {border-radius: 12px;}
 .br-16   {border-radius: 16px;}
+.br-pill {border-radius: 100px;}
 .br-50ct {border-radius: 50%;}
 
 
@@ -894,6 +996,7 @@
 .bg-blue {background-color: $ns-blue;}
 .bg-yellow {background-color: $ns-yellow;}
 .bg-light-blue {background-color: $ns-light-blue;}
+.bg-vl-blue {background-color: $ns-blue-4;}
 .bg-white {background-color: $ns-white;}
 .bg-grey {background-color: $ns-grey;}
 .bg-grey-2 {background-color: $ns-grey-2;}
