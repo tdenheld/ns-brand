@@ -16,6 +16,43 @@
 
     <!-- LINKS -->
     <link rel="stylesheet" type="text/css" href="/assets/css/ns.generic.min.css" />
+    {% if page.rounded-bold %}
+    <style type="text/css">
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        legend,
+        .tile__heading,
+        .headingXXL,
+        .headingXL,
+        .headingL,
+        .headingM {
+            letter-spacing: -0.3px;
+            font-weight: bold;
+        }
+
+        button,
+        input,
+        .formfield,
+        .textInput,
+        .button,
+        .inputSpacer__displayContainer,
+        .select {
+            border-radius: 4px;
+        }
+
+        .checkbox__label:before {
+            border-radius: 2px;
+        }
+    </style>
+    {% endif %}
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
     <script src="/assets/js/modernizr.js"></script>
 
@@ -38,15 +75,15 @@
         //<![CDATA[
 
         window.planbarConfiguration = {
-            staticFilePath: 'https://www.ns.nl/static/apps/rp-planbar-app/5.1.0/',
+            staticFilePath: 'https://www.ns.nl/static/apps/rp-planbar-app/5.4.0/',
             journeyPlannerPath: '/reisplanner'
         }
 
         //]]>
     </script>
-    <script src="https://www.ns.nl/static/apps/rp-planbar-app/5.1.0/runtime.js"></script>
-    <script src="https://www.ns.nl/static/apps/rp-planbar-app/5.1.0/polyfills.js"></script>
-    <script src="https://www.ns.nl/static/apps/rp-planbar-app/5.1.0/main.js"></script>
+    <script src="https://www.ns.nl/static/apps/rp-planbar-app/5.4.0/runtime.js"></script>
+    <script src="https://www.ns.nl/static/apps/rp-planbar-app/5.4.0/polyfills.js"></script>
+    <script src="https://www.ns.nl/static/apps/rp-planbar-app/5.4.0/main.js"></script>
     <script src="https://www.ns.nl/static/apps/gssp/1.2.0/js/gssp.js"></script>
     {% endif %}
 

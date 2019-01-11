@@ -17,6 +17,42 @@
     <!-- LINKS -->
     <link rel="stylesheet" type="text/css" href="/assets/css/ns.generic.min.css" />
     
+    <style type="text/css">
+        .h1,
+        .h2,
+        .h3,
+        .h4,
+        .h5,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        legend,
+        .tile__heading,
+        .headingXXL,
+        .headingXL,
+        .headingL,
+        .headingM {
+            letter-spacing: -0.3px;
+            font-weight: bold;
+        }
+
+        button,
+        input,
+        .formfield,
+        .textInput,
+        .button,
+        .inputSpacer__displayContainer,
+        .select {
+            border-radius: 4px;
+        }
+
+        .checkbox__label:before {
+            border-radius: 2px;
+        }
+    </style>
+    
     <link rel="stylesheet" type="text/css" href="/assets/css/style.css" />
     <script src="/assets/js/modernizr.js"></script>
 
@@ -1533,97 +1569,49 @@
     </div>
 </header>
 <div class="content a a-fi">
-    <div class="container container--extended" data-type="cms-HeroContainer">
-    <div class="hero hero--major hero--smallOverlap" data-noindex="true">
-        <div class="hero__loaderContainer">
-            <div class="heroVisual">
-                <div class="container heroVisual__content">
-                    <div class="grid">
-                        <div class="grid__unit s-3-4 m-10-12 l-6-12">
-                            <div class="tile tk-tile-hero">
-                                <div class="tile__title">
-                                    <h3 class="tile__heading headingL tk-tile-hero__heading f-white">
-                                        Zin in een dagje Kinderdijk?
-                                    </h3>
-                                </div>
-                                <div class="tile__content">
-                                    <p class="s-hidden m-visible">Trein + Bus + Efteling</p>
-                                    <div class="pricedetails">
-                                        <p>
-                                            <span class="pricedetails__price tk-tile-hero__price">
-                                                € 49
-                                            </span>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="tile__footer">
-                                    <div class="buttonGroup">
-                                        <button class="button button--nsWhite s-hidden m-visible">Bekijk meer</button>
-                                        <a class="arrowLink arrowLink--white s-visible m-hidden">Bekijk meer</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <picture class="heroVisual__picture">
-                    <source srcset="/assets/img/heros/hero_kinderdijk.jpg" />
-                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==" alt=""
-                        class="img--contain" />
-                </picture>
-                <div class="full-absolute gd-90-black o-20"></div>
-                <div class="tk-flow" include="/assets/img/flows/flow-gradient-blue.svg"></div>
-            </div>
-        </div>
+    <!-- Travel planner -->
+<div class="gd-r-yellow-subtle pt-3 a a-fi a-del-100">
+    <div class="container pa-2r">
+        <h1 class="headingXL fw-b mb-20 hidden-xs">Plan je reis</h1>
     </div>
 </div>
-     <div class="container a a-fi a-del-200" data-noindex="true">
-    <div class="grid" data-controller="generic/ui/ResponsiveGrid">
-        <div class="grid__unit s-4-4 m-12-12 l-12-12">
-            <div class="tile tile--ns-yellow tile--gradient tile--smallGradient tile--slim tile--noBottom">
-                <div class="tile__header">
-                    <header class="headingGroup" data-type="cms-ArticleHeader">
-                        <h1 class="headingXL">Plan uw reis</h1>
-                    </header>
-                </div>
-                <div rio-pb-app class="tile__content"></div>
-                <div class="tile__footer" data-type="reisplannerbalk-footer">
-                    <div class="separator--noTop separator--alphaGray  tile__footerContent">
-                        <ul class="list list--horizontal list--hasIcon">
-                            <li class="list__item">
-                                <a class="arrowLink--rightBlue" href="/reisinformatie/actuele-situatie-op-het-spoor">
-                                    <span class="icon icon--alert icon--nsRed"></span>
-                                    <span class="s-visible--inline-block m-hidden">
-                                        Verstoringen (5)</span>
-                                    <span class="s-hidden m-visible--inline-block">
-                                        Storingen en werkzaamheden (5)</span>
-                                </a>
-                            </li>
-                            <li class="list__item s-hidden m-visible">
-                                <a class="arrowLink--rightBlue" href="/reisinformatie">Meer reisinformatie</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
+
+<!-- Hero -->
+<div class="container a a-fi a-del-100">
+    <div class="inv-hero">
+
+        <!-- background -->
+        <figure class="inv-hero__img"></figure>
+        <div class="tk-hero__gradient"></div>
+        <figure class="inv-hero__triangle a a-fi-down a-dur-300 a-del-1750 visible-xs"></figure>
+        <div class="a a-fi a-del-600">
+            <div class="inv-hero__flow o-70">
+                <div></div>
+                <div class="lh-none" include="/assets/img/flows/flow-gradient-white.svg"></div>
+                <div class="inv-hero__white-gradient"></div>
             </div>
-            <!-- <ul class="notificationList">
-                    <li class="notificationList__item">
-                        <div class="notificationBar notificationBar--alert notificationBar--ellipsis notificationBar--slim">
-                            <a href="/reisinformatie/calamiteiten/vooraankondiging-werkzaamheden-eindhoven-venlo.html"
-                                class="notificationBar__link">
-                                <span class="notificationBar__icon icon icon--alert icon--nsWhite">
-                                    <span class="alt">Waarschuwing:</span>
-                                </span>
-                                <span class="notificationBar__text">Eindhoven-Venlo werkzaamheden donderdag 12 juli t/m
-                                    zondag 15 juli</span>
-                                <span class="notificationBar__arrow icon icon--chevron-mini icon--nsWhite"></span>
-                            </a>
-                        </div>
-                    </li>
-                </ul> -->
         </div>
+
+        <!-- content -->
+        <div class="inv-hero__tile mxw-700">
+            <h3 class="inv-hero__heading lh-title fw-b f-white ts-t a a-fi-right-200px a-del-350 a-stag">
+                Nooit meer saldo laden? Probeer <span class="no-wrap">NS Flex</span>
+            </h3>
+            <!-- <p class="headingM fw-normal f-white ts-t mb-1 a a-fi-right-200px a-del-350 a-stag">
+                Probeer NS Flex
+            </p> -->
+            <div class="mb-2 a a-fi-right-200px a-del-350 a-stag">
+                <span class="f-white ts-t mr-1">vanaf</span>
+                <span class="headingL f-white fw-b lh-title ts-t">€ 0</span>
+                <span class="f-white ts-t">/ mnd</span>
+            </div>
+            <button class="button button--nsYellow btn-small btn-small--rounded a a-fi-right-200px a-del-350 a-stag">Bekijk
+                meer</button>
+        </div>
+
     </div>
-</div> 
+</div>
+    
     <div class="container container--section a a-fi a-del-500" data-type="cms-PrimairGrid" data-noindex="true">
     <div class="grid" data-controller="generic/ui/ResponsiveGrid" data-type="cms-DragDropGrid">
         <div class="grid__unit s-4-4 m-6-12 l-4-12" data-type="cms-ArticleLinklijstTegel">
@@ -2211,21 +2199,6 @@
     <script src="/assets/js/plugins.bundle.min.js"></script>
     <script src="/assets/js/tk.generic.js"></script>
 
-    
-    <script>
-        //<![CDATA[
-
-        window.planbarConfiguration = {
-            staticFilePath: 'https://www.ns.nl/static/apps/rp-planbar-app/5.4.0/',
-            journeyPlannerPath: '/reisplanner'
-        }
-
-        //]]>
-    </script>
-    <script src="https://www.ns.nl/static/apps/rp-planbar-app/5.4.0/runtime.js"></script>
-    <script src="https://www.ns.nl/static/apps/rp-planbar-app/5.4.0/polyfills.js"></script>
-    <script src="https://www.ns.nl/static/apps/rp-planbar-app/5.4.0/main.js"></script>
-    <script src="https://www.ns.nl/static/apps/gssp/1.2.0/js/gssp.js"></script>
     
 
 </body>
